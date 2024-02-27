@@ -1,5 +1,15 @@
+/*custom propieties*/
+:root{
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris: #757575;
+
+}
+
 html{
-    font-size: 62.55%;
+    font-size: 62.5%;
 }
 
 body{
@@ -16,4 +26,7 @@ body{
 .titulo span{
     font-size: 2rem;
     color: blue;
+}
+.Navegación-principal{
+    background-color: var(--secundario);
 }
