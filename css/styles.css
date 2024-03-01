@@ -30,3 +30,24 @@ body{
 .Navegación-principal{
     background-color: var(--secundario);
 }
+
+.contenedor{
+    width: 120rem;
+    /*
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: ;
+    margin-right: ; */
+    margin: 0 auto;
+
+}
+.nav-bg{
+    background-color: var(--secundario) ;
+}
+.Navegación-principal{
+    padding: 1rem;
+}
+.Navegación-principal a{
+    color: var(--blanco);
+    text-decoration: none;
+}
