@@ -46,8 +46,20 @@ body{
 }
 .Navegación-principal{
     padding: 1rem;
+    display: flex;
+    /*  justify-content es para filas  
+    align-items items para columnas(flex-direction)*/
+    justify-content: space-between;
+    font-size: 2rem;
+    font-weight: bold /* negritas */
 }
 .Navegación-principal a{
     color: var(--blanco);
     text-decoration: none;
+}
+
+
+.Navegación-principal a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
 }
