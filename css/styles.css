@@ -63,3 +63,29 @@ body{
     background-color: var(--primario);
     color: var(--oscuro);
 }
+
+
+/* TAMAÑOS RECOMENDADOS PARA MEDIA QUERY
+    480PX PARA DISPOSITIVOS MOBILES.
+    768PX PARA TABLES.
+    1140PX PARA LAPTOPS
+    1400PX PARA DISPOSITIVOS MAS GRANDES COMO MONITORES O TVS*/
+
+    body{
+        background-color: beige;
+        
+    }
+    @media (min-width: 768px){
+        body{
+            background-color: blue;
+        }
+    }
+        
+    @media (min-width: 480px){
+        body{
+            background-color: cornflowerblue;
+        }
+    }
+    @media (min-width: ) {
+        
+    }
