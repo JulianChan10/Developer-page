@@ -1,65 +1,178 @@
-/*custom propieties*/
+/*Custom properties----COLORES PERSONALIZADOS*/
+
 :root{
     --blanco: #ffffff;
     --oscuro: #212121;
     --primario: #ffc107;
     --secundario: #0097a7;
-    --gris: #757575;
+    --gris:#757575;
 
 }
-
-html{
+html {/*HACK PARA BOX MODEL*/
     font-size: 62.5%;
+    box-sizing: border-box;
 }
+*,*:before, *,:after{
+    box-sizing: inherit;
+}/*HACK PARA BOX MODEL*/
+
 
 body{
     font-size: 16px;
+    font-family:  'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--gris) 0%, var(--blanco) 100%);
 }
-
-.titulo{
-    text-align: center;
+/*Tipografía*/
+h1{
     font-size: 3.8rem;
-    color: brown;
-
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h1,h2,h3{
+    text-align: center;
 }
 
 .titulo span{
     font-size: 2rem;
-    color: blue;
+    color:gray
 }
-.Navegación-principal{
+
+.Navegación-Principal{
     background-color: var(--secundario);
 }
 
-.contenedor{
-    width: 120rem;
-    /*
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: ;
-    margin-right: ; */
-    margin: 0 auto;
+.contenedor {
+    max-width: 120rem;
+    /*margin-top:0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto; */
 
+    /*margin: 0 auto 0 auto; Tomando las posiciones de in reloj*/
+    margin: 0 auto; /*El primer valor corresponde a top botom y el segundo valor corresponde a rigth y left */
 }
+
 .nav-bg{
-    background-color: var(--secundario) ;
+    background-color: var(--secundario);
 }
-.Navegación-principal{
-    padding: 1rem;
+
+.Navegación-Principal {
+    
     display: flex;
-    /*  justify-content es para filas  
-    align-items items para columnas(flex-direction)*/
+    flex-direction: column;
+    align-items: center;
+    /* Justify-content es para filas, 
+    aline -items es para columnas flrx-direction*/
     justify-content: space-between;
     font-size: 2rem;
-    font-weight: bold /* negritas */
+    font-weight: bold; /*Letras en negritas*/
+    
 }
-.Navegación-principal a{
+@media (min-width: 768px){
+    .Navegación-Principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+.Navegación-Principal a:hover {
+    background-color: var(--primario);
+    color: var(--oscuro);
+
+}
+
+.Navegación-Principal a{
+    padding: 1rem;
     color: var(--blanco);
     text-decoration: none;
 }
 
+/* Tamaños recomendados para media query
+480px para moviles
+768px para tablets 
+1140px para laptos 
+1400px para dispositivos mas grandes como monitores o tvs
+*/
+/*
+body{
+    background-color: beige;
+}
 
-.Navegación-principal a:hover{
-    background-color: var(--primario);
-    color: var(--oscuro);
+@media (min-width: 480px){
+    body{
+        background-color: blue;
+    }
+}
+@media (min-width: 768px){
+    body{
+        background-color: cornflowerblue;
+    }
+}*/
+/*Sniped es fragmento de codigo reutilizable*/
+.hero {
+    background-image: url(../Image/hero.jpg);
+    /*../ es para que regrese un nivel en directorio, la carpeta img esta afuera de styles.css
+    */
+    background-repeat: no-repeat;
+    /*En img pequeñas suelen repetirse y abarcar el espacio de la pagina*/
+    background-size: cover; /*sirve para cubirir la imagen con todo el tamaño*/
+    height: 450px;
+    position: relative; /*PARA MANIPULAR LA POSICION EL PADRE SIEMPRE DEBE SER RELATIVE*/
+}
+.contenedor-hero{
+    position: absolute;
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100%;
+    /*Alinear vertical y horizontalmente*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.contenedor-hero p, .contenedor-hero h2{
+    color: var(--blanco);
+}
+
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
+}
+
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);/*Color de texto*/
+    padding: 1rem 3rem;
+    margin-top: 3rem;/*Separacion superior*/
+    font-size: 2rem;
+    text-decoration: none;/*quitar el subrayado*/
+    text-transform: uppercase; /*Convertir texto en mayuscula*/
+    font-weight: bold;
+    border-radius: .5rem; /*Esquinas rededondeadas*/
+    width: 90%; /*ancho del boton*/
+    text-align: center;/*Centra el texto del boton*/
+}
+
+@media (min-width: 768px){
+    .boton{
+        width: auto;
+    }
+}
+
+
+.sombra{
+    margin-top: 2rem;
+    box-shadow: 0px 5px 15px 10px rgba(112,112,112,0.48);
+    /*Motor para google chrome*/
+    -webkit-box-shadow: 0px 5px 15px 10px rgba(112,112,112,0.48);
+    /*Motor para mozilla firefox*/
+    -moz-box-shadow: 0px 5px 15px 10px rgba(112,112,112,0.48);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
 }
