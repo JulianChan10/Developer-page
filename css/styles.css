@@ -102,7 +102,6 @@ body{
     background-color: beige;
 }
 
-<<<<<<< HEAD
 @media (min-width: 480px){
     body{
         background-color: blue;
@@ -177,7 +176,6 @@ body{
     padding: 2rem;
     border-radius: 1rem;
 }
-=======
 .Navegación-principal a:hover{
     background-color: var(--primario);
     color: var(--oscuro);
@@ -205,7 +203,3 @@ body{
             background-color: cornflowerblue;
         }
     }
-    @media (min-width: ) {
-        
-    }
->>>>>>> 794fd57b6f146d425fa030fee1158e3f63a01fd3
